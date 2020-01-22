@@ -10,36 +10,36 @@
 </head>
 <body>
   <div id="app"></div>
-
-  
   <script type="text/babel">
     class App extends React.Component {
       state = {
         name: 'Ryu',
         age: 30
       }
-      //写成箭头函数是因为可以使用this，否者如果用一般的function，this就不能用。
-      handleMouseOver = (e) => {
-        console.log(e.target, e.pageX);
-      }
-      handleClick = (e) => {
-        console.log(e.target);
-        console.log(this.state);
+      handleChange = (e) => {
         this.setState({
-          name: 'Yoshi'
-        });
+          name: e.target.value
+        })
       }
-      handleCopy = (e) => {
-        console.log('Try being original for once');
+      handleSubmit = (e) => {
+        //网页默认点击submit之后就会刷新页面，为了不让页面刷新，写下面这句
+        e.preventDefault();
+        console.log('form submitted', this.state);
       }
       render(){
+
+        // onSubmit方法点击和enter都可以触发另一个方法
+        
         return(
           <div className="app-content">
-            <h1>Hello, ninjas!</h1>
-            <p>My name is: { this.state.name } and I am { this.state.age }</p>
-            <button onClick={this.handleClick}>Click me</button>
-            <button onMouseOver={this.handleMouseOver}>Hover me</button>
-            <p onCopy={this.handleCopy}>What we think, we become</p>
+            <h1>My name is {this.state.name}</h1>
+           
+            <form onSubmit={this.handleSubmit}>
+
+              <input type="text" onChange={this.handleChange} />
+
+              <button>Submit</button>
+            </form>
           </div>
         )
       }
