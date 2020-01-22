@@ -2,12 +2,19 @@ import React, { Component } from 'react';
 import Ninjas from './Ninjas'
 
 class App extends Component {
+  //将数组传给子component
+  state={
+    ninjas:[
+      {name:"zhang",age:24,id:1},
+      {name:"wang",age:15,id:2},
+      {name:"liu",age:25,id:26}
+    ]
+  }
   render() {
     return (
       <div className="App">
         <h1>My first React app</h1>
-        <Ninjas name="Yoshi" age="20" belt="green" />
-        <Ninjas name="Ryu" age="30" belt="black" />
+        <Ninjas ninjas={this.state.ninjas}/>
       </div>
     );
   }
