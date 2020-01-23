@@ -1,0 +1,7 @@
+functional component 跟 class component的区别
+
+functional comoponent / ui component /stateless comoponent  
+就是没有state，靠 父component 的props来传输数据。
+funtional component 只关心 数据输入输出到屏幕
+
+class component有自己的state数据。可以有子component 可以将用户输入的数据储存起来并使用。
