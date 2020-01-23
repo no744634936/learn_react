@@ -1,23 +1,26 @@
-import React, { Component } from 'react';
-import Ninjas from './Ninjas'
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-class App extends Component {
-  //将数组传给子component
-  state={
-    ninjas:[
-      {name:"zhang",age:24,id:1},
-      {name:"wang",age:15,id:2},
-      {name:"liu",age:25,id:26}
-    ]
-  }
-  render() {
-    return (
-      <div className="App">
-        <h1>My first React app</h1>
-        <Ninjas ninjas={this.state.ninjas}/>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
