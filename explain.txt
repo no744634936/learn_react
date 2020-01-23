@@ -1,36 +1,31 @@
-functional component 跟 class component的区别
 
-functional comoponent / ui component /stateless comoponent  
-就是没有state，靠 父component 的props来传输数据。
-funtional component 只关心 数据输入输出到屏幕
+其实Ninjas.js 还可以这样写
+这种写法很奇怪不推荐。
 
-class component有自己的state数据。可以有子component 可以将用户输入的数据储存起来并使用。
+----------------------------------------------------
 
+import React from 'react'
 
------------
-App.js
-components/Ninjas.js
-
------------------
-
-
-
-functional component 还可以这样写
-
-const Ninjas=({ninjas})=>{
-    const ninjaList=ninjas.map((ninja,index)=>{
-      return (
-        <div className="ninja" key={index}>
-          <div>Name: { ninja.name }</div>
-          <div>Age: { ninja.age }</div>
-          <div>Belt: {ninja.belt }</div>
-        </div>
-      )
-    });
+//funcitonal component 不用导入{ Component }  没有state，没有render方法,没有this
+const Ninjas=(props)=>{
+    const { ninjas } = props;
 
     return(
       <div className="ninja-list">
-        {ninjaList}
+        {
+          ninjas.map((ninja,index)=>{
+            return ninja.age>15?
+                (
+                    <div className="ninja" key={index}>
+                      <div>Name: { ninja.name }</div>
+                      <div>Age: { ninja.age }</div>
+                      <div>Belt: {ninja.belt }</div>
+                    </div>
+                ):null;
+            });
+        }
       </div>
     )
 }
+
+export default Ninjas
