@@ -5,3 +5,32 @@ functional comoponent / ui component /stateless comoponent
 funtional component 只关心 数据输入输出到屏幕
 
 class component有自己的state数据。可以有子component 可以将用户输入的数据储存起来并使用。
+
+
+-----------
+App.js
+components/Ninjas.js
+
+-----------------
+
+
+
+functional component 还可以这样写
+
+const Ninjas=({ninjas})=>{
+    const ninjaList=ninjas.map((ninja,index)=>{
+      return (
+        <div className="ninja" key={index}>
+          <div>Name: { ninja.name }</div>
+          <div>Age: { ninja.age }</div>
+          <div>Belt: {ninja.belt }</div>
+        </div>
+      )
+    });
+
+    return(
+      <div className="ninja-list">
+        {ninjaList}
+      </div>
+    )
+}
