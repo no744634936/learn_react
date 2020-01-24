@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Ninjas from './components/Ninjas'
+import AddNinja from './components/AddNinja'
 
 class App extends Component {
   //将数组传给子component
@@ -15,6 +16,7 @@ class App extends Component {
       <div className="App">
         <h1>My first React app</h1>
         <Ninjas ninjas={this.state.ninjas}/>
+        <AddNinja></AddNinja>
       </div>
     );
   }

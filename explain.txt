@@ -1,31 +1,4 @@
+App.js
 
-其实Ninjas.js 还可以这样写
-这种写法很奇怪不推荐。
 
-----------------------------------------------------
-
-import React from 'react'
-
-//funcitonal component 不用导入{ Component }  没有state，没有render方法,没有this
-const Ninjas=(props)=>{
-    const { ninjas } = props;
-
-    return(
-      <div className="ninja-list">
-        {
-          ninjas.map((ninja,index)=>{
-            return ninja.age>15?
-                (
-                    <div className="ninja" key={index}>
-                      <div>Name: { ninja.name }</div>
-                      <div>Age: { ninja.age }</div>
-                      <div>Belt: {ninja.belt }</div>
-                    </div>
-                ):null;
-            });
-        }
-      </div>
-    )
-}
-
-export default Ninjas
+AddNinja.js
