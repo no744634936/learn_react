@@ -11,12 +11,22 @@ class App extends Component {
       {name:"liu",age:25,id:26}
     ]
   }
+  addNinja=(ninja)=>{
+    //每个哈希数组都有一个唯一的id，这里做一个简单的id
+    ninja.id=Math.random();
+    //... 是把state里面的ninjas展开。
+    let ninjas_list =[...this.state.ninjas,ninja];
+    this.setState({
+      ninjas:ninjas_list,
+    });
+
+  }
   render() {
     return (
       <div className="App">
         <h1>My first React app</h1>
         <Ninjas ninjas={this.state.ninjas}/>
-        <AddNinja></AddNinja>
+        <AddNinja addNinja={this.addNinja}></AddNinja>
       </div>
     );
   }

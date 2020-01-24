@@ -1,4 +1,3 @@
-App.js
+将子component 的数据传到父component
 
-
-AddNinja.js
+看App.js 与 AddNinja.js 
