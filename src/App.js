@@ -35,6 +35,22 @@ class App extends Component {
     });
   }
 
+  
+  componentDidMount=()=>{
+    //一般在这个方法里面从数据库取出数据
+    console.log("component Mounted");
+    
+  }
+  componentDidUpdate=(preProps,preState)=>{
+    //this fires when we get a change of states or props.
+    //we can compare with the previrous state or previrous props with current state or props 
+    //and then do something dependant on that
+    console.log("component updated");
+    
+    
+    
+  }
+
   render() {
     return (
       <div className="App">

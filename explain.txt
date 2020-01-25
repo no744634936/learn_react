@@ -1,3 +1,2 @@
 App.js
 
-Ninjas.js
