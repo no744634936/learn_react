@@ -1,7 +1,11 @@
 import React from 'react'
-import {Link,NavLink} from "react-router-dom"
+import {Link,NavLink,withRouter} from "react-router-dom"
 
-const Navbar=()=>{
+//使用 higher order component 就可以获得超能力了，记得要修改export default
+const Navbar=(props)=>{
+    setTimeout(()=>{
+        props.history.push("/about")
+    },10000);
     return(
         <nav className="nav-wrapper red darken-3">
             <div className="container">
@@ -19,4 +23,4 @@ const Navbar=()=>{
     );
 }
 
-export default Navbar
+export default withRouter(Navbar)
