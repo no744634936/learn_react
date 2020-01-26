@@ -1,5 +1,2 @@
-1,网页过两秒钟后从About自动跳转Content。
-
-2，我想从Home component 跳到 About coponent 怎么跳？
-
-
+1,建立Hoc 文件夹代表 higher order component 
+2,里面建立 Rainbow.js 文件
