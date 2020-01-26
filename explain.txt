@@ -2,3 +2,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 
+
+2,npm install react-router-dom
+
+
+3,App.js 里面导入 import {BrowserRouter,Route} from "react-router-dom"
+
