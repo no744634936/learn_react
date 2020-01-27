@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./Component/Navbar"
 
 //npm install react-router-dom 并导入，
-import {BrowserRouter,Route} from "react-router-dom"
+import {BrowserRouter,Route,Switch} from "react-router-dom"
 import Home from "./Component/Home"
 import About from "./Component/About"
 import Content from "./Component/Content"
@@ -17,13 +17,14 @@ class App extends Component {
       <BrowserRouter>
           <div className="App">
             <Navbar></Navbar>
-             {/* 由于网页无法分清/about 与 /:post_id 区别所以要将/:post_id 改为 /posts/:post_id */}
-            
-            <Route exact path="/" component={Home}></Route>  
-            <Route path="/about" component={About}></Route>
-            <Route path="/content" component={Content}></Route>
-            <Route path="/posts/:post_id" component={Post}></Route> 
-
+             
+             {/* switch tag 只让URL从上到下找。如果一致就不再往下找了。所以也就不用把/:post_id写成/post//:post_id */}
+            <Switch>
+              <Route exact path="/" component={Home}></Route>  
+              <Route path="/about" component={About}></Route>
+              <Route path="/content" component={Content}></Route>
+              <Route path="/:post_id" component={Post}></Route> 
+            </Switch>
           </div>
       </BrowserRouter>
 
