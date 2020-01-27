@@ -1,2 +1,5 @@
-1,建立Hoc 文件夹代表 higher order component 
-2,里面建立 Rainbow.js 文件
+1,install axios
+
+ npm install axios
+
+2,Home.js 里面写代码
