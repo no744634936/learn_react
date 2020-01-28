@@ -1,3 +1,37 @@
-Post.js
-App.js
-Home.js
+const postList=posts.length?(
+            posts.map(post=>{
+                return (
+                    <div className="post card" key={post.id}>         //index.css 里面的post
+                        <img src="./Pictures/pokeball.png" alt=""/>   //index.css 里面的 img
+                        <div className="card-content">
+                            <Link to={"/"+post.id}>
+                                <span className="card-title">{post.title}</span>
+                            </Link>
+                            <p>{post.body}</p>
+                        </div>
+                    </div>
+                )
+            })
+        ):(
+            <div className="center">No post yet</div>
+        )
+        return (
+            <div>
+                <div className="container home">                     //index.css 里面的 home
+                    <h4 className="center">Home</h4>
+                    {/* <p>{postList}</p>   
+                    {postList}
+                </div>
+            </div>
+
+
+
+
+
+
+社長、会長がいない時でも、いる時と変わらないパフォーマンスが出る
+
+
+
+
+業績に興味あり、数字を伸ばすアイデアを出す姿があるか
