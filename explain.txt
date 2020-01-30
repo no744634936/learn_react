@@ -1,12 +1,1 @@
-1,npm install redux react-redux
-
-2,create a store in  index.js 
-
-    import {createStore} from "redux"
-    //为了让react 跟 store有联系所以导入provider
-    import {Provider} from "react-redux"
-    const store=createStore();
-
-    ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
-
-3,建立一个reducers文件夹
+1,connect component to store.
