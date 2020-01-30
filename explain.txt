@@ -1,1 +1,5 @@
-1,connect component to store.
+1,connect component to store.connect Home.js to redux store
+  use higher order component  in Home.js
+
+
+
