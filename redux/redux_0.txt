@@ -1,0 +1,13 @@
+1，首先建立一个 redux store
+2，component如果想要redux里面的数据，redux就会将数据以props的形式传给component
+
+3，如果component想改变 redux里的数据。
+   component发送一个action，这个action里面写的就是想要改变数据的逻辑。
+   还可以跟action一起发送一个叫payload的额外数据。
+
+4，action被传给reducer，reducer接受到action后检查type，
+   根据type来处理数据
+
+
+必须将reducer function作为redux store的参数，这样redux store就知道，是哪一个redux function来帮他处理数据了。
+

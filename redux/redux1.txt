@@ -1,0 +1,72 @@
+
+// createStore  from Redux library
+
+    const {createStore}=Redux
+
+
+// reducer function is where we do the interacting with the store
+
+// when the reducer first interact with the store it's not know the state,
+// it is not going to exist,so we have to initialize  the state
+// if we want to edit the data in the store we don't edit it directly 
+// first we dispatch an action into the reducer.
+// reducer take the action and according to the type of action to change the state,
+
+//create an action and pass it to reducer 
+//action is a javascript object ,
+//it has type property which describe the action.(一般为大写字母)
+//and a optional payload of data. we can name it whatever we want 
+
+    const initState={
+        todos:[],
+        posts:[]
+    }
+
+    const todoAction ={
+        type:"ADD_TODO",
+        todo:"buy milk"
+
+    }
+
+    function myreducer(state=initState,action){
+        console.log(state,action)
+        
+    }
+
+//create a store. store is tightly coupled with a reducer function 
+//so the store knows which reducer to interact with.
+
+    const store= createStore(myreducer)
+
+
+//dispatch an action 
+//this means send todoAction to the myreducer function 
+
+   store.dispatch(todoAction)
+
+
+
+
+------------------------------------------------------------------
+会看到console 里面有打印两次
+
+第一次,在创建的时候执行。
+Object{
+    type:"@@redux/INITx.74.53.43"
+}
+Object{
+    posts:[],
+    todos:[]
+}
+
+第二次，是在 dispatch acition的时候( store.dispatch(todoAction))
+
+Object{
+    type:"ADD_TODO",
+    todo:"buy milk"
+}
+Object{
+    posts:[],
+    todos:[]
+}
+

@@ -1,0 +1,58 @@
+//建立一个仓库，建立一个看门人，
+//把看门人放到仓库旁边。
+//交给看门人一个初始化的state，和一个未经初始化的action参数,
+//想让看门人执行什么功能，就发(dispatch)一个action给他。
+//看门人（myreducer）根据自己的职责，来对数据进行更改。
+//为了看清楚每一次store里面的变化，就需要建store subscription功能。(也就是component里面的数据需要实时地根据store里面的数据变化而变化。)
+
+
+
+const initState={
+	todos:[],
+	posts:[]
+}
+
+const todoAction ={
+	type:"ADD_TODO",
+	todo:"buy milk"
+
+}
+const postAction ={
+	type:"ADD_POST",
+	post:"a good place to go"
+
+}
+
+function myreducer(state=initState,action){
+	if(action.type=="ADD_TODO"){
+		return({
+			...state,
+
+			//todos:state.todos.push() 这样是直接更改state，不能这样写
+			todos:[...state.todos,action.todo]
+		})
+	}
+
+	if(action.type=="ADD_POST"){
+		return({
+			...state,
+			posts:[...state.posts,action.post]
+		})
+	}
+
+
+}
+
+const {createStore}=Redux
+const store= createStore(myreducer)
+
+//这个方法是在component里面使用的
+store.subscribe(()=>{
+	console.log("state update")
+	console.log(store.getState())
+})
+
+store.dispatch(todoAction)
+store.dispatch(postAction)
+
+
