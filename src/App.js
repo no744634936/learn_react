@@ -45,9 +45,8 @@ class App extends Component {
     //this fires when we get a change of states or props.
     //we can compare with the previrous state or previrous props with current state or props 
     //and then do something dependant on that
+    //增删改这个component里的数据都会触发这个方法。
     console.log("component updated");
-    
-    
     
   }
 
