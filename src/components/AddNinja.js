@@ -16,7 +16,10 @@ export class AddNinja extends Component {
 
     handleSubmit=(e)=>{
         e.preventDefault();
+
+        //只能这样使用方法。
         this.props.addNinja(this.state);
+        
         
     }
     render() {
