@@ -11,9 +11,11 @@ export class AddForm extends Component {
     }
 
     handleSubmit=(e)=>{
+        //防止页面刷新，输入的数据丢失。
         e.preventDefault();
+        //把数据给父component
         this.props.addTodo(this.state);
-        //添加之后让输入框为空,input 里面value={this.state.content} 必须要写
+        //添加之后删除state的content让输入框为空,input 里面value={this.state.content} 必须要写
         this.setState({
             content:"",
         })

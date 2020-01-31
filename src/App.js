@@ -13,6 +13,7 @@ class App extends Component {
 
   //App.js this is where the function to delete something because it 
   //has to interact with the state right here.
+  //如果要增删改查component的数据就一定要把方法放在这个component里面。
   deleteTodo=(id)=>{
     const todos=this.state.todos.filter(todo=>{
       return todo.id!==id
