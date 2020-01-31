@@ -1,3 +1,6 @@
+App.js   and Ninjas.js
+
+使用三元运算符来写条件。
 
 其实Ninjas.js 还可以这样写
 这种写法很奇怪不推荐。
