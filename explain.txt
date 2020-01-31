@@ -14,8 +14,7 @@ components/Ninjas.js
 -----------------
 
 
-
-functional component 还可以这样写
+接受props还可以这样子接受
 
 const Ninjas=({ninjas})=>{
     const ninjaList=ninjas.map((ninja,index)=>{

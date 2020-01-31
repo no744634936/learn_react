@@ -1,6 +1,7 @@
 import React from 'react'
 
 //funcitonal component 不用导入{ Component }  没有state，没有render方法,没有this
+//就只是一个方法。
 const Ninjas=(props)=>{
     // console.log(this.props);
     const { ninjas } = props;
