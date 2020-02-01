@@ -1,5 +1,5 @@
-Post.js 里的文件还是用axios 从api里取出来的，
-所以要改成从rootReducer.js里面取数据。
+
+前面都是读，现在要做的是如何改store里面的state。
 
 Post.js
 rootReducer.js

@@ -9,6 +9,17 @@ const initState={
     ]
 }
 const rootReducer=(state=initState,action)=>{
+    //每次点击delete之类的button就会把这个action打印到控制台
+    //console.log(action);
+    if(action.type==="DELETE_POST"){
+        let newPosts=state.posts.filter((post)=>{
+            return action.id!==post.id
+        })
+        return{
+            ...state,
+            posts:newPosts
+        }
+    }
     return state;
 }
 
