@@ -44,4 +44,7 @@ const mapStoreStateToProps=(state)=>{
 }
 
 //connect 是一个function 它返回一个higher order component
+//higher order component 就把Home包住了。
+//在index.js里面已经将 rootRducer里的state传给给了App.js，
+//现在通过connect(mapStoreStateToProps) 方法将state.posts取出然后传给home component
 export default connect(mapStoreStateToProps)(Home)
