@@ -1,5 +1,9 @@
 
-前面都是读，现在要做的是如何改store里面的state。
+create actions in separate files.
+action creators are just functions
 
+------------------------------
+Action/PostActions.js 
 Post.js
 rootReducer.js
+
