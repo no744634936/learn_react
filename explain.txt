@@ -1,22 +1,5 @@
+Post.js 里的文件还是用axios 从api里取出来的，
+所以要改成从rootReducer.js里面取数据。
 
-index.js
+Post.js
 rootReducer.js
-Home.js
----------------------------------------------
-
-1,connect component to store.
-  connect Home.js to redux store
-  use higher order component  in Home.js
-
-
-2,如果一个component想用数据，就要先从reducer里面把数据取出来然后转换成这个component的props
-
-
-
-
-3，从github上面下载的下来想要npm start的时候。
-   要记得 npm install axios,
-         npm install redux react-redux
-
-
-
