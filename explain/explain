@@ -1,0 +1,26 @@
+is the data that I want to share global
+and is it going to used in several of the child components
+if so use context api.
+
+context api 就是一个全局变量，用来传递ui theme比较多一点。
+
+
+1, 提供数据 crate ThemeContext.js
+
+  import React, { Component,createContext } from 'react'
+
+ 
+            <ThemeContext.Provider value={{...this.state}}>
+                {this.props.children}
+            </ThemeContext.Provider>
+
+
+
+  使用数据
+  import {ThemeContext} from "../contexts/ThemeContext"
+
+        static contextType=ThemeContext;
+        console.log(this.context);
+        const {isLightTheme,light,dark}=this.context;
+        const theme=isLightTheme?light:dark;
+

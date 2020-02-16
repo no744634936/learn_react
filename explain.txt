@@ -1,9 +1,0 @@
-
-create actions in separate files.
-action creators are just functions
-
-------------------------------
-Action/PostActions.js 
-Post.js
-rootReducer.js
-
