@@ -4,12 +4,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>React Basics</title>
+
+
+  <!-- jsx不被浏览器支持，所以要导入bable -->
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
 </head>
 <body>
   <div id="app"></div>
+
+  <!-- 记得这里也得写上使用了bable -->
   <script type="text/babel">
     class App extends React.Component {
       state = {
@@ -45,6 +50,8 @@
       }
     }
 
+    //第一个参数是要向页面注入的component。这里是App component
+    //第二个参数是向哪一个元素注入component。这里是 id 为app得元素
     ReactDOM.render(<App />, document.getElementById('app'));
   </script>
 </body>
