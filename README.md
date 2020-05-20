@@ -18,3 +18,9 @@
   src/app.js         首页component
   
   src/index.js       将首页component注入首页文件
+
+
+
+将 Ninjas.js component 导入 App.js component
+
+查看文件 Ninjas.js   与 App.js 文件
