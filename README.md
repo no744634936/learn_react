@@ -4,8 +4,17 @@
 
 
 2,
-npx create-react-ap my-app
+   npx create-react-ap my-app
 
-cd my-app
+   cd my-app
 
-npm start
+   npm start
+
+
+查看文件结构
+
+  public/index.html  首页文件
+  
+  src/app.js         首页component
+  
+  src/index.js       将首页component注入首页文件
