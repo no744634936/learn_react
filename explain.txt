@@ -1,4 +1,4 @@
-将子component 的数据传到父component
+将子component 的state数据传到父component 的state里面去
 
 component里面建立一个方法来给state添加元素。
 component再将这个方法当作props传到子component。
