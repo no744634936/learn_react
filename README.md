@@ -75,6 +75,7 @@ class App extends Component {
 export default App;
 
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
 给state赋值时，一定要用 this.setState()方法
 
     let ninjas_list =[...this.state.ninjas,ninja];
