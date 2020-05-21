@@ -1,10 +1,10 @@
 import React from 'react'
 
-//funcitonal component (也叫ui component)不用导入{ Component }  没有state，没有render方法,没有this
+//ui component(也叫 funcitonal component )不用 import{ Component }  没有state，没有render方法,没有this
 //就只是一个方法。
 const Ninjas=(props)=>{
-    // console.log(this.props);
-    const { ninjas } = props;
+    // console.log(this.props); ui component里面不能用
+    const { ninjas } = props;import
     const ninjaList=ninjas.map((ninja,index)=>{component
       return (
         <div className="ninja" key={index}>
