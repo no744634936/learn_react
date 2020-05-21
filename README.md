@@ -9,7 +9,7 @@ src/components/Ninjas.js
 
 文件
 
-
+------------------------------------------------------
 
 container component 有state 数据是一个class   (例如: src/app.js )
 
