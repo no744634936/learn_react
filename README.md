@@ -19,7 +19,7 @@ Ui component （也叫functional component ） 没有state 数据 是一个funct
 -------------------------------------------------------
 
 将 src/components/Ninjas.js  这个functional component 写成 class component的话要这样写
-
+---------------------------------------------------------------------------
 
 
 import React, { Component } from 'react'
