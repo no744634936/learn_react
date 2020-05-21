@@ -61,4 +61,5 @@ class Ninjas extends Component{
   }
   
 }
+
 export default Ninjas
