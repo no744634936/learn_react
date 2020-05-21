@@ -33,6 +33,7 @@ class App extends Component {
     ]
     
   }
+  
   addNinja=(ninja)=>{
   
     //每个哈希数组都有一个唯一的id，这里做一个简单的id
@@ -72,3 +73,27 @@ class App extends Component {
 }
 
 export default App;
+
+ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+给state赋值时，一定要用 this.setState()方法
+
+    let ninjas_list =[...this.state.ninjas,ninja];
+    
+    this.setState({
+    
+      ninjas:ninjas_list,
+      
+    });
+    
+  ----------------------------------------
+  这种写法是不对的，this.ninjas.push(ninja) 
+  
+  是在直接修改state，没有用 this.setState() 方法就将state给修改了
+  
+  这样是不行的，不能直接修改state，必须像上面那样写。
+    
+    this.setState({
+    
+      ninjas:this.ninjas.push(ninja)
+      
+    });
