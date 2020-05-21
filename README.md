@@ -23,6 +23,7 @@ Ui component （也叫functional component ） 没有state 数据 是一个funct
 
 
 import React, { Component } from 'react'
+
 class Ninjas extends Component{
 
   render(){
@@ -56,6 +57,8 @@ class Ninjas extends Component{
       </div>
       
     )
+    
   }
+  
 }
 export default Ninjas
