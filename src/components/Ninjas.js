@@ -3,9 +3,10 @@ import React from 'react'
 //ui component(也叫 funcitonal component )不用 import{ Component }  没有state，没有render方法,没有this
 //就只是一个方法。all
 const Ninjas=(props)=>{
-    // console.log(this.props); functional component里面不能用 this.props  。class component里面才能用 this.props
     
-    const { ninjas } = props;import
+    // console.log(this.props); //functional component里面不能用 this.props  。class component里面才能用 this.props
+    
+    const { ninjas } = props;
     const ninjaList=ninjas.map((ninja,index)=>{component
       return (
         <div className="ninja" key={index}>
