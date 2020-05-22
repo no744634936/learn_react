@@ -22,11 +22,11 @@ class App extends Component {
 
   }
 
-  //id 就是每个 哈希元素的key
+  //id 就是每个 object元素的id
   deleteNinja=(id)=>{
     //记住一定不能直接修改state,一定使用非破坏性方法(non destructive method)
-    //这种写法就等于把ninja.id相同的都删除了。 id等于哈希元素的key的值
-    
+    //这种写法就等于把ninja.id相同的都删除了。 参数id等于object元素id的值
+    //ninja.id !==id 时就将，object元素返回到 ninjas 数组里
     let ninjas = this.state.ninjas.filter(ninja=>{
       return ninja.id !==id
     })
