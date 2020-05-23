@@ -4,7 +4,9 @@
   
     render
   
-  这三个方法是最常用的
+  这三个方法是最常用的.
+  
+  查看app.js 这一个文件就可以了
   
   componentDidMount=()=>{
   
