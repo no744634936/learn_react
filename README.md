@@ -2,10 +2,17 @@
 
 
  render() {
+ 
     return (
+    
       <div className="App">
+      
         <h1>My first React app</h1>
+        
         <Ninjas ninjas={this.state.ninjas}/>
+        
       </div>
+      
     );
+    
   }
