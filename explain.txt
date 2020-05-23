@@ -14,4 +14,4 @@ Navbar.js 文件使用link tag来让网页不reload
 
 3,App.js 里面导入 import {BrowserRouter,Route} from "react-router-dom"
 
-4,
+4,用    <BrowserRouter>    </BrowserRouter> 将div包裹起来，然后在里面使用路由
