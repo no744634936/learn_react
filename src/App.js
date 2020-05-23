@@ -48,6 +48,10 @@ class App extends Component {
     //增删改这个component里的数据都会触发这个方法。
     console.log("component updated");
     
+    //更新前的props 与 state
+    console.log(preProps);
+    console.log(preState)
+    
   }
 
   render() {
