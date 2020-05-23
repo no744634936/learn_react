@@ -16,7 +16,7 @@ class App extends Component {
       <BrowserRouter>
           <div className="App">
             <Navbar></Navbar>
-            {/* exact path="/" 这样是将 Home component 作为 http://localhost:3001/ 的默认页 */}
+            {/* exact path="/" 这样使用 http://localhost:3001/about 路由时候 只导入about component，而不要导入Home component*/}
             <Route exact path="/" component={Home}></Route>  
             <Route path="/about" component={About}></Route>
             <Route path="/content" component={Content}></Route>
