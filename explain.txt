@@ -1,3 +1,20 @@
+ app.js里面的component。
+
+
+  <div className="App">
+    <Navbar></Navbar>
+    {/* exact path="/" 这样是将 Home component 作为 http://localhost:3001/ 的默认页 */}
+    <Route exact path="/" component={Home}></Route>  
+    <Route path="/about" component={About}></Route>
+    <Route path="/content" component={Content}></Route>
+
+  </div>
+
+router 里面的component都可以传一个props 参数。这是router给component的
+
+
+
+
 1,网页过两秒钟后从About自动跳转Content。
 
 
@@ -25,6 +42,8 @@ router 里面的component都可以传一个props 参数。这是router给compone
 
 
 
-2，我想从Home component 跳到 About coponent 怎么跳？
+2，可是<Navbar></Navbar> component没有放进router里面。
+
+这时就可以使用 higher order component 具体查看 components/Navbar.js 文件
 
 
