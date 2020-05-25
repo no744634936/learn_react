@@ -8,11 +8,15 @@ const Rainbow = (WrappedComponent) => {
   const randomColour = colours[Math.floor(Math.random() * 6)];
   const className = randomColour + '-text';
     //这里的这个props 就是父component 传给 wrappedComponent 的props
-    return(props) => (
-        <div className={className}>
-            <WrappedComponent {...props}/>
-        </div>
-    )
+    return(props) => {
+        return(
+            <div className={className}>
+                <WrappedComponent {...props}/>
+            </div>
+        )
+    }
+
+
 }
 
 export default Rainbow
