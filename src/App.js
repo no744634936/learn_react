@@ -18,7 +18,7 @@ class App extends Component {
           <div className="App">
             <Navbar></Navbar>
              
-             {/* switch tag 只让URL从上到下找。如果一致就不再往下找了。所以也就不用把/:post_id写成/post//:post_id */}
+             {/* switch tag 只让URL从上到下找。如果一致就不再往下找了。所以也就不用把/:post_id写成/post/:post_id */}
             <Switch>
               <Route exact path="/" component={Home}></Route>  
               <Route path="/about" component={About}></Route>
