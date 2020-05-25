@@ -1,2 +1,5 @@
 1,建立Hoc 文件夹代表 higher order component 
 2,里面建立 Rainbow.js 文件
+
+
+3,将components/About.js 组件包裹在Rainbow.js 组件里面。
