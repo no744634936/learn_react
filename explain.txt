@@ -1,3 +1,16 @@
-Post.js
+
+1, Home.js
+
+---------------
+用 Link 将记录包裹起来，点击之后， 跳到指定路路由。
+
+  <Link to={"/posts/"+post.id}>
+      <span className="card-title">{post.title}</span>
+  </Link>
+  -----------------------------------------
+  
+  2，Post.js
+  根据路由id参数，使用api 取得对应的记录
+  
+  
 App.js
-Home.js
