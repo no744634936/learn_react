@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react'
 
-export class AddNinja extends Component {
+class AddNinja extends Component {
     state={
         name:null,
         age:null,
