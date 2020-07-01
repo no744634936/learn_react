@@ -98,3 +98,8 @@ export default App;
       ninjas:this.ninjas.push(ninja)
       
     });
+----------------------------------------------------------------------
+  直接修改state，react不会重新render。这个就不用多说了。
+  另外一点是，setState的更新是异步的，而且，react会将要修改的状态放到一个更新队列，并考虑到render次数，会将多个值一起改变并一次render。
+  其实react官方还是推荐immutable的state，
+  也就是说，我们在改变state的时候，需要重新生成一个对象去代替原来的state，而不是直接改原来的。
