@@ -7,7 +7,7 @@ const Ninjas=(props)=>{
     // console.log(this.props); //functional component里面不能用 this.props  。class component里面才能用 this.props
     
     const { ninjas } = props;
-    const ninjaList=ninjas.map((ninja,index)=>{component
+    const ninjaList=ninjas.map((ninja,index)=>{
       return (
         <div className="ninja" key={index}>
           <div>Name: { ninja.name }</div>
