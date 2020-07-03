@@ -9,14 +9,20 @@ import Content from "./Component/Content"
 
 
 class App extends Component {
-
+    constructor(){
+        super();
+        this.state={
+            name:"zhang"
+        }
+    }
 
   render() {
     return (
       <BrowserRouter>
           <div className="App">
-            <Navbar></Navbar>
-            {/* exact path="/" 这样是将 Home component 作为 http://localhost:3001/ 的默认页 */}
+              
+            <Navbar name={this.state.name}></Navbar>
+
             <Route exact path="/" component={Home}></Route>  
             <Route path="/about" component={About}></Route>
             <Route path="/content" component={Content}></Route>

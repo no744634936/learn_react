@@ -3,6 +3,9 @@ import {Link,NavLink,withRouter} from "react-router-dom"
 
 //使用 higher order component 就可以获得超能力了，记得要修改export default
 const Navbar=(props)=>{
+    console.log(props);
+    console.log(props.name);
+    
     setTimeout(()=>{
         props.history.push("/about")
     },10000);
@@ -17,10 +20,13 @@ const Navbar=(props)=>{
                     <li><Link to="/">Home</Link></li>
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/content">Content</NavLink></li>
+
+                    <button onClick={()=>props.history.push("/about")}>redirect</button>
+                {/* 我不用 Link 或者 NavLink 用onClick={()=>props.history.push("/about")也可以实现页面跳转，更灵活 */}
                 </ul>
             </div>
         </nav>
     );
 }
 
-export default withRouter(Navbar)
+export default  withRouter(Navbar)

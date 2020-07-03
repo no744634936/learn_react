@@ -1,9 +1,9 @@
 import React from 'react'
 
 const About=(props)=>{
-    // console.log(props);
-
-    //两秒钟后跳转到content
+    console.log(props);
+    
+    // 两秒钟后跳转到content
     setTimeout(()=>{
         props.history.push("/content")
     },2000);
