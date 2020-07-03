@@ -1,37 +1,53 @@
-import React, { Component } from 'react';
-import Navbar from "./Component/Navbar"
+import React from 'react';
+import { Route, Link,BrowserRouter} from 'react-router-dom';
 
-//npm install react-router-dom 并导入，
-import {BrowserRouter,Route} from "react-router-dom"
-import Home from "./Component/Home"
-import About from "./Component/About"
-import Content from "./Component/Content"
+import './App.css';
 
+const HomePage = props => {
+  console.log(props);
+  return (
+    <div>
+      <button onClick={() => props.history.push('/topics')}>Topics </button>
+      <h1>HOME PAGE</h1>
+    </div>
+  );
+};
 
-class App extends Component {
-    constructor(){
-        super();
-        this.state={
-            name:"zhang"
-        }
-    }
+const TopicsList = props => {
+    console.log(props);
+    
+  return (
+        <div>
+        <h1>TOPIC LIST PAGE</h1>
+        <Link to={`${props.match.url}/13`}>TO TOPIC 13</Link>
+        <Link to={`${props.match.url}/17`}>TO TOPIC 17</Link>
+        <Link to={`${props.match.url}/21`}>TO TOPIC 21</Link>
+        </div>
+  );
+};
 
-  render() {
-    return (
-      <BrowserRouter>
-          <div className="App">
-              
-            <Navbar name={this.state.name}></Navbar>
+const TopicDetail = props => {
+    console.log(props);
+    
+  return (
+    <div>
+      <h1>TOPIC DETAIL PAGE: {props.match.params.topicId}</h1>
+    </div>
+  );
+};
 
-            <Route exact path="/" component={Home}></Route>  
-            <Route path="/about" component={About}></Route>
-            <Route path="/content" component={Content}></Route>
-         
-          </div>
-      </BrowserRouter>
-
-    );
-  }
+function App() {
+  return (
+    <BrowserRouter>
+    <div>
+      <Route exact path='/' component={HomePage} />
+      <Route exact path='/blog/asdqw/topics' component={TopicsList} />
+      <Route path='/blog/asdqw/topics/:topicId' component={TopicDetail} />
+      <Route exact path='/blog/topics' component={TopicsList} />
+      <Route path='/blog/topics/:topicId' component={TopicDetail} />
+    </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
