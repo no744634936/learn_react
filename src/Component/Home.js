@@ -24,6 +24,7 @@ export class Home extends Component {
         const postList=posts.length?(
             posts.map(post=>{
                 return (
+                    //这个div就是一个component，可以将之分离出来，只是为了方便，我把它放在这里
                     <div className="post card" key={post.id}>
                         <div className="card-content">
                             <span className="card-title">{post.title}</span>
