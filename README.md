@@ -4,7 +4,7 @@
 
 
 2,
-   npx create-react-ap my-app
+   npx create-react-app my-app
 
    cd my-app
 
